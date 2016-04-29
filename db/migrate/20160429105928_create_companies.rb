@@ -8,9 +8,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :review_time
       t.string :trial_review
 
-      service_name  rate  max_credit_limit  review_time min_loan_time trial_review
-
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
