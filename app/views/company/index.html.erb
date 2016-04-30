@@ -15,7 +15,7 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->  
+    <![endif]-->
   </head>
   <body role="document">
 
@@ -49,7 +49,6 @@
 </header>
 
 <div class="container">
-
   <div class="page-header" id="banner">
     <div class="bs-component">
       <div class="jumbotron">
@@ -60,7 +59,35 @@
     </div>
     <div class="row">
       <div class="col-lg-8 col-md-7 col-sm-6">
-        <h1>Umi</h1>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="panel-title">絞り込み条件で探す</div>
+          </div>
+          <div class="panel-body">
+            <%= search_form_for(@q, method: :get) do |f| %>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <%= f.label "サービス名" %>
+                <%= f.text_field :service_name_eq, class: "form-control", placeholder: "完全一致" %>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <%= f.label "審査時間" %><br>
+                <%= f.radio_button :rate, 1 %> <%= f.label :rate_1, "指定なし", :class => 'text-primary' %>
+                <%= f.radio_button :rate, 2 %> <%= f.label :rate_2, "30分以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate, 3 %> <%= f.label :rate_3, "1時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate, 4 %> <%= f.label :rate_4, "3時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate, 5 %> <%= f.label :rate_5, "当日中", :class => 'text-primary' %>
+              </div>
+            </div>
+              <div>
+                <%= f.submit 'この条件で検索する', class: "btn btn-danger center-block" %>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        <h1>検索画面</h1>
         <p class="lead">日本語も美しく表示できるBootstrapテーマ</p>
       </div>
       <div class="col-lg-4 col-md-5 col-sm-6">
