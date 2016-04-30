@@ -68,11 +68,11 @@
             <div class="col-sm-12">
               <div class="form-group">
                 <%= f.label "審査時間" %><br>
-                <%= f.radio_button :rate_eq, "1" %> <%= f.label :rate_eq, "指定なし", :class => 'text-primary' %>
-                <%= f.radio_button :rate_eq, "2" %> <%= f.label :rate_eq, "30分以内", :class => 'text-primary' %>
-                <%= f.radio_button :rate_eq, "3" %> <%= f.label :rate_eq, "1時間以内", :class => 'text-primary' %>
-                <%= f.radio_button :rate_eq, "4" %> <%= f.label :rate_eq, "3時間以内", :class => 'text-primary' %>
-                <%= f.radio_button :rate_eq, "5" %> <%= f.label :rate_eq, "当日中", :class => 'text-primary' %>
+                <%= f.radio_button :rate_lt, 9 %> <%= f.label :rate_eq, "指定なし", :class => 'text-primary' %>
+                <%= f.radio_button :rate_lt, 2 %> <%= f.label :rate_eq, "30分以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate_lt, 3 %> <%= f.label :rate_eq, "1時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate_lt, 4 %> <%= f.label :rate_eq, "3時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate_lt, 5 %> <%= f.label :rate_eq, "当日中", :class => 'text-primary' %>
               </div>
               <div class="form-group">
                 <%= f.label "融資スピード" %><br>
