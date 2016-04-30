@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   root to: "companies#index"
-  resources :companies  
+
+  resources :companies do
+    get 'search', :on => :collection
+  end
+
+  #     collection do
+  #       get 'search'
+  #     end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

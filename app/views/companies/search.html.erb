@@ -1,0 +1,17 @@
+
+<% @companies.each do |company| %>
+  <table>
+    <caption></caption>
+    <thead>
+      <tr>
+        <th><%= company.rate %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= company.service_name %></td>
+      </tr>
+    </tbody>
+  </table>
+
+<% end %>
