@@ -4,4 +4,8 @@ class CompanyController < ApplicationController
     @q = Company.ransack(params[:id])
     @companies = @q.result
   end
+
+  def show
+    
+  end
 end
