@@ -45,4 +45,5 @@ group :development do
   gem 'spring'
 end
 gem 'ransack'
+gem 'pry-rails'
 

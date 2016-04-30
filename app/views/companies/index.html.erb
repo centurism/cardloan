@@ -67,19 +67,22 @@
             <%= search_form_for @q, url: search_companies_path(@companies), method: :get do |f| %>
             <div class="col-sm-12">
               <div class="form-group">
-                <%= f.label "サービス名" %>
-                <%= f.text_field :service_name, class: "form-control", placeholder: "完全一致" %>
-              </div>
-            </div>
-            <div class="col-sm-12">
-              <div class="form-group">
                 <%= f.label "審査時間" %><br>
-                <%= f.radio_button :rate, "1" %> <%= f.label :rate_1, "指定なし", :class => 'text-primary' %>
-                <%= f.radio_button :rate, "2" %> <%= f.label :rate_2, "30分以内", :class => 'text-primary' %>
-                <%= f.radio_button :rate, "3" %> <%= f.label :rate_3, "1時間以内", :class => 'text-primary' %>
-                <%= f.radio_button :rate, "4" %> <%= f.label :rate_4, "3時間以内", :class => 'text-primary' %>
-                <%= f.radio_button :rate, "5" %> <%= f.label :rate_5, "当日中", :class => 'text-primary' %>
+                <%= f.radio_button :rate_eq, "1" %> <%= f.label :rate_eq, "指定なし", :class => 'text-primary' %>
+                <%= f.radio_button :rate_eq, "2" %> <%= f.label :rate_eq, "30分以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate_eq, "3" %> <%= f.label :rate_eq, "1時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate_eq, "4" %> <%= f.label :rate_eq, "3時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate_eq, "5" %> <%= f.label :rate_eq, "当日中", :class => 'text-primary' %>
               </div>
+              <div class="form-group">
+                <%= f.label "融資スピード" %><br>
+                <%= f.radio_button :rate, "1" %> <%= f.label :rate_1, "指定なし", :class => 'text-primary' %>
+                <%= f.radio_button :rate, "2" %> <%= f.label :rate_2, "1時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate, "3" %> <%= f.label :rate_3, "3時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate, "4" %> <%= f.label :rate_4, "当日中", :class => 'text-primary' %>
+                <%= f.radio_button :rate, "5" %> <%= f.label :rate_5, "1週間以内", :class => 'text-primary' %>
+              </div>
+<!--               <%= check_box_tag('q[review_time_eq_any][]', ) %> -->
             </div>
               <div>
                 <%= f.submit 'この条件で検索する', class: "btn btn-danger center-block" %>
