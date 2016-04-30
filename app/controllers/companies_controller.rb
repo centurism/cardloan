@@ -7,7 +7,7 @@ class CompaniesController < ApplicationController
 
   def search
     @companies = Company.all
-    @companies = Company.search(rate_lt: params[:q][:rate_lt]).result
+    @companies = Company.search(rate_lt: params[:q][:rate_lt], review_lt: params[:q][:review_lt]).result
   end
 
 

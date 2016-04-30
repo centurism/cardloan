@@ -68,19 +68,19 @@
             <div class="col-sm-12">
               <div class="form-group">
                 <%= f.label "審査時間" %><br>
-                <%= f.radio_button :rate_lt, 1441,:checked=>true %> <%= f.label :rate_eq, "指定なし", :class => 'text-primary' %>
-                <%= f.radio_button :rate_lt, 31 %> <%= f.label :rate_eq, "30分以内", :class => 'text-primary' %>
-                <%= f.radio_button :rate_lt, 61 %> <%= f.label :rate_eq, "1時間以内", :class => 'text-primary' %>
-                <%= f.radio_button :rate_lt, 181 %> <%= f.label :rate_eq, "3時間以内", :class => 'text-primary' %>
-                <%= f.radio_button :rate_lt, 1441 %> <%= f.label :rate_eq, "当日中", :class => 'text-primary' %>
+                <%= f.radio_button :rate_lt, 1441,:checked=>true %> <%= f.label :rate, "指定なし", :class => 'text-primary' %>
+                <%= f.radio_button :rate_lt, 31 %> <%= f.label :rate, "30分以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate_lt, 61 %> <%= f.label :rate, "1時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate_lt, 181 %> <%= f.label :rate, "3時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :rate_lt, 1441 %> <%= f.label :rate, "当日中", :class => 'text-primary' %>
               </div>
               <div class="form-group">
                 <%= f.label "融資スピード" %><br>
-                <%= f.radio_button :rate, "1" %> <%= f.label :rate_1, "指定なし", :class => 'text-primary' %>
-                <%= f.radio_button :rate, "2" %> <%= f.label :rate_2, "1時間以内", :class => 'text-primary' %>
-                <%= f.radio_button :rate, "3" %> <%= f.label :rate_3, "3時間以内", :class => 'text-primary' %>
-                <%= f.radio_button :rate, "4" %> <%= f.label :rate_4, "当日中", :class => 'text-primary' %>
-                <%= f.radio_button :rate, "5" %> <%= f.label :rate_5, "1週間以内", :class => 'text-primary' %>
+                <%= f.radio_button :review_time_lt, 5001, :checked => true %> <%= f.label :review_time, "指定なし", :class => 'text-primary' %>
+                <%= f.radio_button :review_time_lt, 61 %> <%= f.label :review_time, "1時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :review_time_lt, 181 %> <%= f.label :review_time, "3時間以内", :class => 'text-primary' %>
+                <%= f.radio_button :review_time_lt, 1441 %> <%= f.label :review_time, "当日中", :class => 'text-primary' %>
+                <%= f.radio_button :review_time_lt, 5001 %> <%= f.label :review_time, "1週間以内", :class => 'text-primary' %>
               </div>
 <!--               <%= check_box_tag('q[review_time_eq_any][]', ) %> -->
             </div>
