@@ -82,7 +82,7 @@
                 <%= f.radio_button :review_time_lt, 1441 %> <%= f.label :review_time, "当日中", :class => 'text-primary' %>
                 <%= f.radio_button :review_time_lt, 5001 %> <%= f.label :review_time, "1週間以内", :class => 'text-primary' %>
               </div>
-              <div class="form-group">
+<!--               <div class="form-group">
                 <%= f.label :borrowing_method , "借入方法（複数選択可）" %><br>
                 <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態A", :class => 'text-primary' %>
                 <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態B", :class => 'text-primary' %>
@@ -108,8 +108,7 @@
                 <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態D", :class => 'text-primary' %>
                 <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態E", :class => 'text-primary' %>
                 <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態F", :class => 'text-primary' %>
-              </div>
-<!--               <%= check_box_tag('q[review_time_eq_any][]', ) %> -->
+              </div> -->
             </div>
               <div>
                 <%= f.submit 'この条件で検索する', class: "btn btn-danger center-block" %>
