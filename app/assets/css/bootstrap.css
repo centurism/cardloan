@@ -6439,6 +6439,7 @@ a.badge:hover, a.badge:focus {
   margin-bottom: 30px;
   color: inherit;
   background-color: #eee;
+  background-image: url("/assets/top_banner.png");
 }
 .jumbotron h1,
 .jumbotron .h1 {

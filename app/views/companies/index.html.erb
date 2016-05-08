@@ -23,7 +23,7 @@
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a href="/"><img src="/assets/top_title.png"></a>
+        <a href="/"><img src="/assets/top_title.gif"></a>
         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -51,12 +51,9 @@
 <div class="container">
   <div class="page-header" id="banner">
     <div class="bs-component">
-      <div class="jumbotron">
-        <h1>ここに</h1>
-        <p>トップのバナーを置きます</p>
-        <p><a class="btn btn-primary btn-lg">最新ランキング</a></p>
-      </div>
+        <img src="/assets/top_banner.png" class="img-responsive">
     </div>
+    <br>
     <div class="row">
       <div class="col-lg-9 col-md-7 col-sm-6">
         <div class="panel panel-default">
@@ -74,6 +71,7 @@
                 <%= f.radio_button :rate_lt, 181 %> <%= f.label :rate, "3時間以内", :class => 'text-primary' %>
                 <%= f.radio_button :rate_lt, 1441 %> <%= f.label :rate, "当日中", :class => 'text-primary' %>
               </div>
+              <hr>
               <div class="form-group">
                 <%= f.label "融資スピード" %><br>
                 <%= f.radio_button :review_time_lt, 5001, :checked => true %> <%= f.label :review_time, "指定なし", :class => 'text-primary' %>
@@ -82,24 +80,27 @@
                 <%= f.radio_button :review_time_lt, 1441 %> <%= f.label :review_time, "当日中", :class => 'text-primary' %>
                 <%= f.radio_button :review_time_lt, 5001 %> <%= f.label :review_time, "1週間以内", :class => 'text-primary' %>
               </div>
-<!--               <div class="form-group">
+              <hr>
+               <div class="form-group">
                 <%= f.label :borrowing_method , "借入方法（複数選択可）" %><br>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態A", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態B", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態C", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態D", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態E", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態F", :class => 'text-primary' %>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "1" %> <%= f.label :borrowing_method_cont_any, "口座振込", :class => 'text-primary' %>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "2" %> <%= f.label :borrowing_method_cont_any, "ATM/CD（コンビニ）", :class => 'text-primary' %>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "3" %> <%= f.label :borrowing_method_cont_any, "ATM/CD", :class => 'text-primary' %>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "4" %> <%= f.label :borrowing_method_cont_any, " ATM/CD（提携金融機関）", :class => 'text-primary' %>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "5" %> <%= f.label :borrowing_method_cont_any, "店舗窓口", :class => 'text-primary' %>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "6" %> <%= f.label :borrowing_method_cont_any, "インターネット", :class => 'text-primary' %>
               </div>
+              <hr>
               <div class="form-group">
-                <%= f.label :borrowing_method , "返済方法（複数選択可）" %><br>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態A", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態B", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態C", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態D", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態E", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態F", :class => 'text-primary' %>
+                <%= f.label :return_method , "返済方法（複数選択可）" %><br>
+                <%= f.check_box :return_method_cont_any,{multiple: true, checked: true}, "1" %> <%= f.label :return_method_cont_any, "口座振込", :class => 'text-primary' %>
+                <%= f.check_box :return_method_cont_any,{multiple: true, checked: true}, "2" %> <%= f.label :return_method_cont_any, "ATM/CD（コンビニ）", :class => 'text-primary' %>
+                <%= f.check_box :return_method_cont_any,{multiple: true, checked: true}, "3" %> <%= f.label :return_method_cont_any, "ATM/CD", :class => 'text-primary' %>
+                <%= f.check_box :return_method_cont_any,{multiple: true, checked: true}, "4" %> <%= f.label :return_method_cont_any, " ATM/CD（提携金融機関）", :class => 'text-primary' %>
+                <%= f.check_box :return_method_cont_any,{multiple: true, checked: true}, "5" %> <%= f.label :return_method_cont_any, "店舗窓口", :class => 'text-primary' %>
+                <%= f.check_box :return_method_cont_any,{multiple: true, checked: true}, "6" %> <%= f.label :return_method_cont_any, "コンビニ", :class => 'text-primary' %>
               </div>
+              <hr>
               <div class="form-group">
                 <%= f.label :borrowing_method , "利用できるコンビニ（複数選択可）" %><br>
                 <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態A", :class => 'text-primary' %>
@@ -108,7 +109,8 @@
                 <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態D", :class => 'text-primary' %>
                 <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態E", :class => 'text-primary' %>
                 <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態F", :class => 'text-primary' %>
-              </div> -->
+              </div>
+              <hr>
             </div>
               <div>
                 <%= f.submit 'この条件で検索する', class: "btn btn-danger center-block" %>
@@ -116,14 +118,65 @@
             </div>
             <% end %>
           </div>
-        <h1>検索画面</h1>
-        <p class="lead">日本語も美しく表示できるBootstrapテーマ</p>
-      </div>
-      <div class="col-lg-3 col-md-5 col-sm-6">
-        <aside class="panel panel-default">
+          <hr>
+
+        <div class="panel panel-primary">
           <div class="panel-heading">
-            <h4 class="panel-title">游ゴシックの有効・無効切り替え</h4>
+            <div class="panel-title"><img src="/assets/icon_search.png">　目的別に探す</div>
           </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <a href="#"><img src="/assets/top_row_rate.png" alt="低金利ローン" class="img-responsive"></a>
+          <br>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <a href="#"><img src="/assets/top_for_women.png" alt="女性におすすめのローン" class="img-responsive"></a>
+          <br>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <a href="#"><img src="/assets/top_for_beginner.png" alt="はじめての方におすすめのローン" class="img-responsive"></a>
+          <br>
+        </div>
+
+      </div>
+
+      <div class="col-lg-3 col-md-5 col-sm-6">
+
+        <a href="#" class="thumbnail">
+          <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTU0NzVlYzFmZWEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTQ3NWVjMWZlYSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OS41NTQ2ODc1IiB5PSI5NC41Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="サムネイル" class="img-responsive">
+        </a>
+
+        <a href="#" class="thumbnail">
+          <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTU0NzVlYzFmZWEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTQ3NWVjMWZlYSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OS41NTQ2ODc1IiB5PSI5NC41Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="サムネイル" class="img-responsive">
+        </a>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <div class="panel-title"><img src="/assets/icon_search.png">　初心者講座
+              </div>
+            </div>
+
+            <div class="panel-body">
+            <div class="media">
+              <div class="media-left">
+                <a href="#" class>
+                  <img class="media-object" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTQ3NWVjMTkzMiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NDc1ZWMxOTMyIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy40Njg3NSIgeT0iMzYuNSI+NjR4NjQ8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" alt="...">
+                </a>
+              </div>
+              <div class="media-body">初心者にわかりにくい銀行系カードローンとその他の違いについて
+              </div>
+            </div>
+            </div>
+          </div>
+
+        <aside class="panel panel-default">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <div class="panel-title"><img src="/assets/icon_search.png">　PICK UP</div>
+          </div>
+        </div>
           <div class="panel-body">
             <p>v3.3.5から<code>&lt;body&gt;</code>に<code>.no-thank-yu</code>を指定することで游ゴシックを使わないようにすることができるようになりました。</p>
             <p id="anti-yu-gothic-message">現在デモページは游ゴシックの指定が<span class="text-primary">有効</span>になっています。</p>
