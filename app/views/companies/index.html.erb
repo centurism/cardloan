@@ -82,7 +82,7 @@
               </div>
               <hr>
                <div class="form-group">
-                <%= f.label :borrowing_method , "借入方法（複数選択可）" %><br>
+                <%= f.label :borrowing_method_cont_any , "借入方法（複数選択可）" %><br>
                 <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "1" %> <%= f.label :borrowing_method_cont_any, "口座振込", :class => 'text-primary' %>
                 <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "2" %> <%= f.label :borrowing_method_cont_any, "ATM/CD（コンビニ）", :class => 'text-primary' %>
                 <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "3" %> <%= f.label :borrowing_method_cont_any, "ATM/CD", :class => 'text-primary' %>
@@ -101,14 +101,14 @@
                 <%= f.check_box :return_method_cont_any,{multiple: true, checked: true}, "6" %> <%= f.label :return_method_cont_any, "コンビニ", :class => 'text-primary' %>
               </div>
               <hr>
-              <div class="form-group">
-                <%= f.label :borrowing_method , "利用できるコンビニ（複数選択可）" %><br>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態A", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態B", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態C", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態D", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態E", :class => 'text-primary' %>
-                <%= f.check_box :borrowing_method,{multiple: true},nil %> <%= f.label :review_time, "状態F", :class => 'text-primary' %>
+               <div class="form-group">
+                <%= f.label :borrowing_method_cont_any , "利用できるコンビニ（複数選択可）" %><br>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "1" %> <%= f.label :borrowing_method_cont_any, "口座振込", :class => 'text-primary' %>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "2" %> <%= f.label :borrowing_method_cont_any, "ATM/CD（コンビニ）", :class => 'text-primary' %>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "3" %> <%= f.label :borrowing_method_cont_any, "ATM/CD", :class => 'text-primary' %>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "4" %> <%= f.label :borrowing_method_cont_any, " ATM/CD（提携金融機関）", :class => 'text-primary' %>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "5" %> <%= f.label :borrowing_method_cont_any, "店舗窓口", :class => 'text-primary' %>
+                <%= f.check_box :borrowing_method_cont_any,{multiple: true, checked: true}, "6" %> <%= f.label :borrowing_method_cont_any, "インターネット", :class => 'text-primary' %>
               </div>
               <hr>
             </div>
