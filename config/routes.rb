@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  get 'aboutus' => 'aboutus#index'
+  get 'policy' => 'policy#index'
   root to: "companies#index"
 
   resources :companies do
     get 'search', :on => :collection
   end
+
 
   #     collection do
   #       get 'search'
